@@ -3,7 +3,4 @@ on: [push, pull_request, workflow_dispatch]
 
 jobs:
   build:
-    # 'with' ではなく 'env' をジョブレベルで指定します
-    env:
-      FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true
     uses: cormoran/zmk/.github/workflows/build-user-config.yml@v0.3-branch+dya
