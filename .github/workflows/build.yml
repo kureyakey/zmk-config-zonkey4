@@ -3,7 +3,7 @@ on: [push, pull_request, workflow_dispatch]
 
 jobs:
   build:
-    uses: cormoran/zmk/.github/workflows/build-user-config.yml@v0.3-branch+dya
-    # 以下の2行を追加することで、呼び出し先のワークフローにも Node.js 24 を強制できます
-    with:
+    # 'with' ではなく 'env' をジョブレベルで指定します
+    env:
       FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true
+    uses: cormoran/zmk/.github/workflows/build-user-config.yml@v0.3-branch+dya
