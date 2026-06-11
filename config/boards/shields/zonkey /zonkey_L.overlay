@@ -1,5 +1,4 @@
 #include "zonkey.dtsi"
-#include <behaviors/battery_history_request.dtsi>
 
 / {
     /* Custom behaviors can go here, but avoid redefining 'none' */
